@@ -1,7 +1,6 @@
 import { Inter } from 'next/font/google'
-import styles from '../styles/index.css'
 import './globals.css'
-
+import Link from 'next/link';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -11,13 +10,38 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <div className='w-1366'>
+    <div className='w-[1366px] m-auto bg-slate-600'>
       <head>
-        <title className={styles.test}>My tl site</title>
+        <title className='test'>My tl site</title>
       </head>
       <header>
         <h1>My t1 site</h1>
       </header>
+      <nav className='w-full h-[60px] flex justify-between'>
+        <Link href="/">
+        홈
+
+        </Link>
+        
+        <Link href="/button1">
+
+
+       button1
+
+        </Link>
+        
+        <Link href="/button2">
+
+        <button>button2</button>
+
+
+        </Link>
+        
+        <Link href="/button3">
+
+        <button>button3</button>
+        </Link>
+      </nav>
       {children}
       <footer>
         <div>footer</div>
